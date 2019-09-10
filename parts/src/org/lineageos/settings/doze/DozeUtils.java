@@ -20,6 +20,7 @@ package org.lineageos.settings.doze;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.display.AmbientDisplayConfiguration;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.UserHandle;
@@ -27,7 +28,6 @@ import android.support.v7.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.android.internal.hardware.AmbientDisplayConfiguration;
 
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 
