@@ -125,7 +125,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
+    android.hardware.power@1.2-service.xiaomi_raphael
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
