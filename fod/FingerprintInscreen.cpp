@@ -89,6 +89,10 @@ Return<void> FingerprintInscreen::onFinishEnroll() {
     return Void();
 }
 
+Return<void> FingerprintInscreen::onPress() {
+    return onPress(0);
+}
+
 Return<void> FingerprintInscreen::onPress(int32_t ambientLight) {
     xiaomiDisplayFeatureService->setFeature(0, 11, 1, 4);
     if (ambientLight > 12) {

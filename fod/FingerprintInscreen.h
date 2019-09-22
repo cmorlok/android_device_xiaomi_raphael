@@ -43,7 +43,8 @@ public:
     Return<int32_t> getSize() override;
     Return<void> onStartEnroll() override;
     Return<void> onFinishEnroll() override;
-    Return<void> onPress(int32_t ambientLight) override;
+    Return<void> onPress() override;
+    Return<void> onPress(int32_t ambientLight);
     Return<void> onRelease() override;
     Return<void> onShowFODView() override;
     Return<void> onHideFODView() override;
