@@ -1,5 +1,7 @@
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    bt.max.hfpclient.connections=1 \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
     persist.vendor.btstack.enable.splita2dp=true \
     vendor.bluetooth.soc=cherokee
@@ -36,6 +38,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
     ro.vendor.display.sensortype=2 \
+    vendor.display.enable_rotator_ui=1 \
     ro.xiaomi.bl.poll=true \
     persist.displayfeature.dc_backlight.threshold=610 \
     persist.displayfeature.dc_backlight.enable=false \
@@ -45,7 +48,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
-    debug.sf.enable_hwc_vds=1
+    debug.sf.enable_hwc_vds=1 \
+    persist.sys.force_sw_gles=1 \
+    ro.kernel.qemu.gles=0 \
+    persist.vendor.color.matrix=2
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,12 +60,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IOP
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.iop.enable_prefetch_ofr=0 \
-    vendor.iop.enable_uxe=0
+    vendor.perf.iop_v3.enable=1 \
+    vendor.iop.enable_uxe=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/system/etc/media_profiles_vendor.xml \
-    vendor.mm.enable.qcom_parser=63963135
+    media.aac_51_output_enabled=true \
+    media.stagefright.audio.deep=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-qcp=true \
+    mmp.enable.3g2=true \
+    persist.mm.enable.prefetch=true \
+    vendor.mm.enable.qcom_parser=63963135 \
+    vendor.vidc.debug.level=1 \
+    vendor.swvdec.log.level=1
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,8 +95,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_enable=true \
     ro.vendor.qti.sys.fw.bservice_limit=8 \
-    vendor.perf.iop_v3.enable=1 \
-    vendor.iop.enable_uxe=1 \
     vendor.perf.gestureflingboost.enable=true \
     vendor.perf.workloadclassifier.enable=true
 
@@ -91,9 +107,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,22 \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
+    persist.radio.efssync=true \
     persist.radio.NO_STAPA=1 \
     persist.radio.VT_CAM_INTERFACE=1 \
     persist.vendor.data.iwlan.enable=true \
+    persist.vendor.radio.bar_fake_gcell=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.redir_party_num=1 \
