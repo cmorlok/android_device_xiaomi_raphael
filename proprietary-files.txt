@@ -172,12 +172,12 @@ vendor/lib/modules/rmnet_shs.ko:lib/modules/rmnet_shs.ko
 vendor/lib/modules/tspp.ko:lib/modules/tspp.ko
 
 # Perf
-lib64/vendor.qti.hardware.iop@1.0.so
-lib64/vendor.qti.hardware.iop@2.0.so
-lib64/vendor.qti.hardware.perf@1.0.so
-lib/vendor.qti.hardware.iop@1.0.so
-lib/vendor.qti.hardware.iop@2.0.so
-lib/vendor.qti.hardware.perf@1.0.so
+# lib64/vendor.qti.hardware.iop@1.0.so
+# lib64/vendor.qti.hardware.iop@2.0.so
+# lib64/vendor.qti.hardware.perf@1.0.so
+# lib/vendor.qti.hardware.iop@1.0.so
+# lib/vendor.qti.hardware.iop@2.0.so
+# lib/vendor.qti.hardware.perf@1.0.so
 
 # Power
 bin/hw/android.hardware.power@1.2-service|23db9dd75d8889f29a1e6f6d67b2bee553c41b9b
