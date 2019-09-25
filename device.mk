@@ -53,7 +53,9 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libvulkan
+    libvulkan \
+    libdisplayconfig \
+    libqdMetaData.system
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
