@@ -129,16 +129,16 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # WiFi Display
-PRODUCT_PACKAGES += \
-    libnl
+#PRODUCT_PACKAGES += \
+#    libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
