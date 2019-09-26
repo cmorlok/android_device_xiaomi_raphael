@@ -1,3 +1,8 @@
+on post-fs-data
+    mkdir /data/XXX 0711 system system
+    setprop logd.logpersistd logcatd
+    setprop logd.logpersistd.enable true
+
 on post-fs
     mount none /sbin/chargeonlymode /sbin/charger bind
     mount none /system/bin/hw/android.hardware.power@1.2-service /vendor/bin/hw/android.hardware.power@1.2-service bind
@@ -8,6 +13,7 @@ on post-fs
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
 
 on early-init
+    write /proc/sys/kernel/printk 7
     mount none /system/lib/modules/audio_adsp_loader.ko /vendor/lib/modules/audio_adsp_loader.ko bind
     mount none /system/lib/modules/audio_apr.ko /vendor/lib/modules/audio_apr.ko bind
     mount none /system/lib/modules/audio_cs35l41.ko /vendor/lib/modules/audio_cs35l41.ko bind
