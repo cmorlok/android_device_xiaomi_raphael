@@ -1,3 +1,12 @@
+on early-init
+    write /proc/sys/kernel/printk 7
+    write /proc/sys/kernel/printk_ratelimit 0
+
+on post-fs-data
+    mkdir /data/XXX 0711 system system
+    setprop logd.logpersistd logcatd
+    setprop logd.logpersistd.enable true
+
 service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
     override
     class late_start
