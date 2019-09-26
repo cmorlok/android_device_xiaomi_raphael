@@ -23,6 +23,6 @@ endif
 LOCAL_MODULE := android.hardware.power@1.2-service.xiaomi_raphael
 LOCAL_INIT_RC := android.hardware.power@1.2-service.xiaomi_raphael.rc
 LOCAL_MODULE_TAGS := optional
-#LOCAL_HEADER_LIBRARIES := generated_kernel_headers
+LOCAL_HEADER_LIBRARIES := device_kernel_headers
 LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable
 include $(BUILD_EXECUTABLE)
